@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="305dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/appapp"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="-164dp"
+            android:src="@drawable/floor_plan" />
+
+        <Button
+            android:id="@+id/mapapp"
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="300dp"
+            android:layout_marginBottom="489dp"
+            android:text="3D" />
+
+        <Button
+            android:id="@+id/appapp"
+            android:layout_width="120dp"
+            android:layout_height="58dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="86dp"
+            android:text="平面" />
+
+        <Button
+            android:id="@+id/meapp"
+            android:layout_width="120dp"
+            android:layout_height="58dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="282dp"
+            android:text="数据采集" />
+
+        <Button
+            android:id="@+id/dingwei"
+            android:layout_width="113dp"
+            android:layout_height="66dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="2dp"
+            android:text="定位" />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignEnd="@+id/mapapp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@xml/changebutton" />
+
+        <!--<Button-->
+        <!--android:id="@+id/position"-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="61dp"-->
+        <!--android:text="数据采集" />-->
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

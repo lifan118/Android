@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="3.21"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/Connected"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:height="20dp"
+            android:text="N/A" />
+
+        <TextView
+            android:id="@+id/Ssid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/Ip"
+            android:height="20dp"
+            android:text="N/A" />
+
+        <TextView
+            android:id="@+id/Ip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Bssid"
+            android:height="20dp"
+            android:text="N/A" />
+
+        <TextView
+            android:id="@+id/Bssid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Mac"
+            android:height="20dp"
+            android:text="N/A" />
+
+        <TextView
+            android:id="@+id/Mac"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Rssi"
+            android:height="20dp"
+            android:text="N/A" />
+
+        <TextView
+            android:id="@+id/Rssi"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Connected"
+            android:height="20dp"
+            android:text="N/A" />
+
+        <TextView
+            android:id="@+id/orientationData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/accelerometerData"
+            android:height="30dp"
+            android:gravity="center"
+            android:text="方向数据:"
+            android:textColor="#ee00ee" />
+
+        <TextView
+            android:id="@+id/accelerometerData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="216dp"
+            android:height="30dp"
+            android:gravity="center"
+            android:text="加速数据:"
+            android:textColor="#ee00ee" />
+
+        <TextView
+            android:id="@+id/pressData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orientationData"
+            android:height="30dp"
+            android:gravity="center"
+            android:text="压力数据:"
+            android:textColor="#ee00ee" />
+
+        <TextView
+            android:id="@+id/stepCounterData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/pressData"
+            android:height="30dp"
+            android:gravity="center"
+            android:text="步数总数:"
+            android:textColor="#ee00ee" />
+        <!--<TextView android:id="@+id/stepDetectorData" android:layout_width="match_parent" android:layout_height="wrap_content"-->
+        <!--android:gravity="center" android:height="30dp" android:textColor="#ee00ee" android:text="步数单数:"-->
+        <!--android:layout_below="@+id/stepCounterData" android:layout_centerHorizontal="true"/>-->
+        <!--<TextView android:id="@+id/currentDate" android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" android:gravity="center" android:height="30dp" android:text="当前时间:"-->
+        <!--android:textColor="#ee00ee"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@+id/Ssid" android:layout_above="@+id/accelerometerData"/>-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ToggleButton
+            android:id="@+id/rssiColBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_toggle_button"
+            android:textColor="#ffffff"
+            android:textOff="开启数据采集"
+            android:textOn="关闭数据采集" />
+
+        <Button
+            android:id="@+id/saveSensorsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rssiColBtn"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_num_button"
+            android:text=" 保存传感器数据 "
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rssiColBtn"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/bg_num_button"
+            android:text=" 保存WiFi数据 "
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rssiColBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="101dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/bg_num_button"
+            android:text=" 返回 "
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
